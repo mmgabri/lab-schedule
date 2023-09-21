@@ -69,7 +69,7 @@ public class ScheduleEventImpl implements ScheduleEvent {
                 .name(NAME_SCHEDULE)
                 .endDate(endTime)
                 .startDate(startTime)
-                .scheduleExpression("rate(59 minutes)")
+                .scheduleExpression("rate(1 days)")
                 .target(builderTarget(event))
                 .flexibleTimeWindow(FlexibleTimeWindow.builder()
                         .mode(FlexibleTimeWindowMode.OFF)
