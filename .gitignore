@@ -5,13 +5,7 @@ logs/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-V1/.aws-sam/
-V1/samconfig.toml
-V1/loaderDynamodbFunction/**/src/main/**/target/
-V2/.aws-sam/
-V2/addToQueueFunction/**/src/main/**/target/
-V2/loaderDynamodbFunction/**/src/main/**/target/
-V2/samconfig.toml
+
 ### STS ###
 .apt_generated
 .classpath
