@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Poc schedule
+
+Globals:
+  Function:
+    Timeout: 20
+    Tracing: Active
+  Api:
+    TracingEnabled: True
+
+Parameters:
+  param:
+    Type: String
+    Default: ' '
+
+Resources:
+  scheduleFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      FunctionName: 'schedule-function'
+      Timeout: 600
+      MemorySize: 2048
+      CodeUri: functions/scheduleFunction
+      Handler: com.mmgabri.lambda.Handler::handleRequest
+      Runtime: java11
+      Architectures:
+        - x86_64
+      Role: "arn:aws:iam::146570171569:role/service-role/scheduleFunction-role-616gx5ks"  
+
+  HelloFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      FunctionName: 'hello-function'
+      Timeout: 600
+      MemorySize: 2048
+      CodeUri: functions/
+      Handler: helloFunction.lambda_handler
+      Runtime:  python3.8
+      Role: "arn:aws:iam::146570171569:role/service-role/helloFunction-role-i6j6ln8v"

@@ -1,0 +1,22 @@
+Resources:
+  Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 300
+      MemorySize: 128
+      Handler: com.mmgabri.lambda.Handler
+      CodeUri: C:\_git\labs\lab-process-file\lab-control-process-file\functions\addToQueueFunction
+      Runtime: java11
+      Architectures:
+        - x86_64
+      Environment:
+        Variables:
+          ARN_LAMBDA: arn:aws:lambda:us-east-1:146570171569:function:event-bridge-lambda
+          BatchSize: 100
+          RDS_DB_NAME: db
+          RDS_HOSTNAME: 3.86.209.184
+          RDS_PASSWORD: 123
+          RDS_USERNAME: mmgabri
+          ROLE_ARN_LAMBDA: arn:aws:iam::146570171569:role/service-role/Amazon_EventBridge_Scheduler_LAMBDA_478ebd3d07
+          S3BucketName: mmgabri-testes-local
+          SQSQueueName: queue-testes-local

@@ -1,0 +1,41 @@
+HELP.md
+target/
+logs/
+!**out/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+V1/.aws-sam/
+V1/samconfig.toml
+V1/loaderDynamodbFunction/**/src/main/**/target/
+V2/.aws-sam/
+V2/addToQueueFunction/**/src/main/**/target/
+V2/loaderDynamodbFunction/**/src/main/**/target/
+V2/samconfig.toml
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
