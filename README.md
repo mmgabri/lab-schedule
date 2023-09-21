@@ -1,4 +1,5 @@
 # Função Lambda para schedular execução de outro lambda
+## schedulleFunction --> helloFunction
 
 ## Para testar Local:
 ### 1- criar lambda "helloFunction" no ambiente aws utilizando o códido python na pasta functions
