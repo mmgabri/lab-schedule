@@ -7,5 +7,6 @@
 ### 4- subir o docker
 ### 5- na pasta raiz, executar o comando "sam build" (necessário ter o SAM instalado)
 ### 6- executar lambda scheduleFunction
+### 7- verificar execução do lambda hello function no ambiente aws, de acordo com o horário schedulado
 
 
